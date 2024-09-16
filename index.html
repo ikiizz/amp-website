@@ -278,22 +278,22 @@
 				padding: 10px 20px;
 			}
 		}
-		@media (min-width: 601px) {
-			#hidden-desktop {
-				display: none;
-			}
-			#show-desktop {
+		@media (max-width: 600px) {
+			#mobile {
 				display: block;
-				text-align: center;
-				font-size: 50px;
+			}
+		}
+		@media (min-width: 601px) {
+			#tablet-desktop {
+				display: none;
 			}
 		}
 	</style>
 </head>
 <body>
+<div id="mobile">
+<div id="tablet-desktop">
 	<div id="root">
-	    <div id="hidden-desktop">
-	    <div id="show-desktop"><p>Situs ini hanya dapat diakses melalui HP</p></div>
 		<div class="left">
 			<h1 class="desktop-hidden">Rifki</h1>
 		</div>
@@ -333,25 +333,7 @@
 		</div>
 	</div>
     </div>
-<amp-script script="no-desktop"></amp-script>
-<script id="no-desktop" type="text/plain" target="amp-script">
-var usrAgent = navigator.userAgent;
-        function detectMobile() 
-        {
-            if(usrAgent.match(/Mobile/i))
-            {
-                return "Mobile";
-            }
-        }
-        var isMobile = detectMobile();
-        if(isMobile)
-        {
-            window.location = "https://mobile.rifki.xyz";
-        }
-        else
-        {
-            window.location = "https://www.rifki.xyz";
-        }
-</script>
+</div>
+</div>
 </body>
 </html>
