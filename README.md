@@ -1,1 +1,1 @@
-# amp-website
+# Personal website with AMP support
