@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=2"/>
 <meta name="robots" content="index, follow"/>
 <script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 <link rel="shortcut icon" href="favicon.ico" sizes="32x32" type="image/x-icon"/>
 <title>Muhamad Rifki Sumarna</title>
@@ -326,5 +327,25 @@
 		</div>
 	</div>
     </div>
+<amp-script script="no-desktop"></amp-script>
+<script id="no-desktop" type="text/plain" target="amp-script">
+var usrAgent = navigator.userAgent;
+        function detectMobile() 
+        {
+            if(usrAgent.match(/Mobile/i))
+            {
+                return "Mobile";
+            }
+        }
+        var isMobile = detectMobile();
+        if(isMobile)
+        {
+            window.location = "https://mobile.rifki.xyz";
+        }
+        else
+        {
+            window.location = "https://www.rifki.xyz";
+        }
+</script>
 </body>
 </html>
