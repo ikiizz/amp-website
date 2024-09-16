@@ -6,27 +6,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=2"/>
 <meta name="robots" content="index, follow"/>
 <script async src="https://cdn.ampproject.org/v0.js"></script>
-<script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-<script type="text/plain" target="amp-script" id="">
-var usrAgent = navigator.userAgent;
-        function detectMobile() 
-        {
-            if(usrAgent.match(/Mobile/i))
-            {
-                return "Mobile";
-            }
-        }
-        var isMobile = detectMobile();
-        if(isMobile)
-        {
-            window.location = "https://mobile.rifki.xyz";
-        }
-        else
-        {
-            window.location = "https://www.rifki.xyz";
-        }
-</script>
 <link rel="shortcut icon" href="favicon.ico" sizes="32x32" type="image/x-icon"/>
 <title>Muhamad Rifki Sumarna</title>
 <meta name="description" content="Selamat Datang Di Website Rifki"/>
@@ -168,14 +148,6 @@ var usrAgent = navigator.userAgent;
 			text-decoration-color: #4a69bd;
 		}
 
-		/* .branding {
-			text-align: left;
-			font-weight: 400;
-			color: #a5a5a5;
-			font-size: 80%;
-			margin: 20px 0px;
-		} */
-
 		.button {
 			padding: 10px 15px;
 			text-decoration: none;
@@ -305,10 +277,16 @@ var usrAgent = navigator.userAgent;
 				padding: 10px 20px;
 			}
 		}
+		@media (min-width: 1024px) {
+			#hidden-desktop {
+				display: none;
+			}
+		}
 	</style>
 </head>
 <body>
 	<div id="root">
+	    <div id="hidden-desktop">
 		<div class="left">
 			<h1 class="desktop-hidden">Rifki</h1>
 		</div>
@@ -347,6 +325,6 @@ var usrAgent = navigator.userAgent;
 			</div>
 		</div>
 	</div>
-<amp-script src="https://code.jquery.com/jquery-3.7.1.min.js" layout="container"></amp-script>
+    </div>
 </body>
 </html>
